@@ -31,7 +31,8 @@ set clipboard+=unnamedplus
 
 " how to render invis chars
 set list
-set listchars=tab:→\	,space:·,trail:·,extends:»
+"set listchars=tab:>-,space:·,trail:·,extends:»
+set listchars=tab:→\ ,space:·,trail:·,extends:»
 
 " colors
 syntax enable
