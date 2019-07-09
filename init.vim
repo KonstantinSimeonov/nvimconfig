@@ -1,4 +1,5 @@
-source ./autoload/vim-pathogen/autoload/pathogen.vim
+let PATHOGEN_PATH=fnamemodify($MYVIMRC, ':h') . "/autoload/vim-pathogen/autoload/pathogen.vim"
+exec "source " . PATHOGEN_PATH
 execute pathogen#infect()
 
 set nocompatible
