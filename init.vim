@@ -31,7 +31,6 @@ set clipboard+=unnamedplus
 
 " how to render invis chars
 set list
-"set listchars=tab:>-,space:·,trail:·,extends:»
 set listchars=tab:→\ ,space:·,trail:·,extends:»
 
 " colors
@@ -42,6 +41,7 @@ filetype plugin on
 
 " nerdtree
 map <C-n> :NERDTreeToggle<CR>
+let NERDTreeShowHidden=1 " show hidden files
 
 nmap Y y$
 
