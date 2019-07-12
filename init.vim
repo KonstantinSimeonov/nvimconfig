@@ -23,6 +23,9 @@ set autoread
 set ts=4 sw=4 sts=4
 set mouse=a
 
+" column length
+set colorcolumn=100
+
 " fuzzy find
 set path+=**
 
