@@ -42,6 +42,9 @@ colorscheme badwolf
 
 filetype plugin on
 
+" tabs autoexpand
+autocmd FileType haskell setlocal expandtab
+
 " nerdtree
 map <C-n> :NERDTreeToggle<CR>
 let NERDTreeShowHidden=1 " show hidden files
