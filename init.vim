@@ -44,6 +44,7 @@ filetype plugin on
 
 " tabs autoexpand
 autocmd FileType haskell setlocal expandtab
+autocmd FileType sbt setlocal expandtab tabstop=2 softtabstop=2 shiftwidth=2
 
 " nerdtree
 map <C-n> :NERDTreeToggle<CR>
