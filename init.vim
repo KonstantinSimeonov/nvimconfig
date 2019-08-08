@@ -20,6 +20,7 @@ set hidden
 set number
 set smartindent autoindent smarttab cindent cinoptions=g0,N-s,E-s
 set autoread
+set signcolumn=yes
 set ts=4 sw=4 sts=4
 set mouse=a
 
@@ -41,6 +42,7 @@ syntax enable
 colorscheme badwolf
 
 filetype plugin on
+au BufRead,BufNewFile *.sbt set filetype=scala
 
 " tabs autoexpand
 autocmd FileType haskell setlocal expandtab
