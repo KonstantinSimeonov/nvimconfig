@@ -46,7 +46,8 @@ au BufRead,BufNewFile *.sbt set filetype=scala
 au BufRead,BufNewFile *.conf set filetype=conf
 
 " tabs autoexpand
-autocmd FileType sbt,conf,haskell setlocal expandtab tabstop=2 softtabstop=2 shiftwidth=2
+autocmd FileType * setlocal expandtab
+autocmd FileType sbt,conf,haskell setlocal tabstop=2 softtabstop=2 shiftwidth=2
 
 " nerdtree
 map <C-n> :NERDTreeToggle<CR>
