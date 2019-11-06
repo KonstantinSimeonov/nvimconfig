@@ -12,7 +12,7 @@
 	url = https://github.com/derekwyatt/vim-scala.git
 [submodule "bundle/coc.nvim"]
 	path = bundle/coc.nvim
-	url = git@github.com:neoclide/coc.nvim.git
+	url = https://github.com/neoclide/coc.nvim.git
 [submodule "bundle/typescript-vim"]
 	path = bundle/typescript-vim
-	url = git@github.com:leafgarland/typescript-vim.git
+	url = https://github.com/leafgarland/typescript-vim.git
