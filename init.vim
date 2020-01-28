@@ -105,3 +105,8 @@ endfunction
 
 " Highlight symbol under cursor on CursorHold
 autocmd CursorHold * silent call CocActionAsync('highlight')
+
+highlight DiffAdd    ctermbg=22
+highlight DiffChange ctermbg=22
+highlight DiffDelete ctermbg=88
+highlight DiffText   cterm=bold ctermbg=106
