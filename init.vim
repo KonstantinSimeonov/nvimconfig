@@ -45,7 +45,7 @@ filetype plugin on
 au BufRead,BufNewFile *.sbt set filetype=scala
 au BufRead,BufNewFile *.sc set filetype=scala
 au BufRead,BufNewFile *.conf set filetype=conf
-au BufRead,BufNewFile *.tsx set filetype=typescript
+au BufRead,BufNewFile *.tsx set filetype=typescriptreact syntax=typescript
 
 " tabs autoexpand
 autocmd FileType * setlocal expandtab
