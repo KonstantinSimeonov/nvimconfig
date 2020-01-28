@@ -49,7 +49,7 @@ au BufRead,BufNewFile *.tsx set filetype=typescriptreact syntax=typescript
 
 " tabs autoexpand
 autocmd FileType * setlocal expandtab
-autocmd FileType sbt,conf,haskell setlocal tabstop=2 softtabstop=2 shiftwidth=2
+autocmd FileType typescript,javascript,sbt,conf,haskell setlocal tabstop=2 softtabstop=2 shiftwidth=2
 
 " nerdtree
 map <C-n> :NERDTreeToggle<CR>
