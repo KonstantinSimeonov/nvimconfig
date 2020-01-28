@@ -39,7 +39,7 @@ set listchars=tab:→\ ,space:·,trail:·,extends:»
 
 " colors
 syntax enable
-colorscheme badwolf
+colorscheme panda
 
 filetype plugin on
 au BufRead,BufNewFile *.sbt set filetype=scala
