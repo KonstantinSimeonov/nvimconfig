@@ -46,10 +46,14 @@ au BufRead,BufNewFile *.sbt set filetype=scala
 au BufRead,BufNewFile *.sc set filetype=scala
 au BufRead,BufNewFile *.conf set filetype=conf
 au BufRead,BufNewFile *.tsx set filetype=typescriptreact syntax=typescript
+au BufRead,BufNewFile *.spec.ts set filetype=typescript syntax=typescript
+au BufRead,BufNewFile *.spec.tsx set filetype=typescriptreact syntax=typescript
+au FileType sql setl formatprg=/usr/local/bin/pg_format\ -
 
 " tabs autoexpand
 autocmd FileType * setlocal expandtab
-autocmd FileType typescript,javascript,sbt,conf,haskell setlocal tabstop=2 softtabstop=2 shiftwidth=2
+autocmd FileType go setlocal noexpandtab
+autocmd FileType scss,yaml,css,typescriptreact,typescript,javascriptreact,javascript,sbt,conf,haskell setlocal tabstop=2 softtabstop=2 shiftwidth=2
 
 " nerdtree
 map <C-n> :NERDTreeToggle<CR>
@@ -90,7 +94,8 @@ nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
-nmap <leader>rn <Plug>(coc-rename)
+nmap ,rn <Plug>(coc-rename)
+
 
 " Use K to show documentation in preview window
 nnoremap <silent> K :call <SID>show_documentation()<CR>
@@ -110,3 +115,5 @@ highlight DiffAdd    ctermbg=22
 highlight DiffChange ctermbg=22
 highlight DiffDelete ctermbg=88
 highlight DiffText   cterm=bold ctermbg=106
+
+command! -nargs=0 Prettier :call CocAction('runCommand', 'prettier.formatFile')
