@@ -90,7 +90,6 @@ nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gr <Plug>(coc-references)
 nmap ,rn <Plug>(coc-rename)
 
-
 " Use K to show documentation in preview window
 nnoremap <silent> K :call <SID>show_documentation()<CR>
 
@@ -101,3 +100,11 @@ function! s:show_documentation()
     call CocAction('doHover')
   endif
 endfunction
+
+" pls complete my stuff when I press enter OK BRO??
+" also, c-y can go fuck itself, I don't want
+" finger spasms
+inoremap <silent><expr> <cr>
+  \ coc#pum#visible()
+    \ ? coc#pum#confirm()
+    \ : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
