@@ -1,13 +1,6 @@
 {
-  "metals.javaHome": "/usr/bin/java",
-  "languageserver": {
-    "metals": {
-      "command": "metals-vim",
-      "rootPatterns": ["build.sbt"],
-      "filetypes": ["scala", "sbt"]
-    }
-  },
   "tslint.autoFixOnSave": true,
   "eslint.autoFixOnSave": true,
-  "coc.preferences.formatOnSaveFiletypes": ["css", "scss"]
+  "coc.preferences.formatOnSaveFiletypes": ["css", "scss", "ts", "tsx"],
+  "tsserver.log": "on"
 }

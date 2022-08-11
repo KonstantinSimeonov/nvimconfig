@@ -19,3 +19,6 @@
 [submodule "bundle/panda-vim"]
 	path = bundle/panda-vim
 	url = https://github.com/markvincze/panda-vim.git
+[submodule "bundle/vim-graphql"]
+	path = bundle/vim-graphql
+	url = https://github.com/jparise/vim-graphql.git

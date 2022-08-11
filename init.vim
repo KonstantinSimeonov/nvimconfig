@@ -46,21 +46,16 @@ au BufRead,BufNewFile *.sbt set filetype=scala
 au BufRead,BufNewFile *.sc set filetype=scala
 au BufRead,BufNewFile *.conf set filetype=conf
 au BufRead,BufNewFile *.tsx set filetype=typescriptreact syntax=typescript
-au BufRead,BufNewFile *.spec.ts set filetype=typescript syntax=typescript
-au BufRead,BufNewFile *.spec.tsx set filetype=typescriptreact syntax=typescript
-au FileType sql setl formatprg=/usr/local/bin/pg_format\ -
+au BufRead,BufNewFile sql* set filetype=sql
 
 " tabs autoexpand
 autocmd FileType * setlocal expandtab
-autocmd FileType go setlocal noexpandtab
-autocmd FileType scss,yaml,css,typescriptreact,typescript,javascriptreact,javascript,sbt,conf,haskell setlocal tabstop=2 softtabstop=2 shiftwidth=2
+autocmd FileType graphql,yml,scss,yaml,css,typescriptreact,typescript,javascriptreact,javascript,sbt,conf,haskell setlocal tabstop=2 softtabstop=2 shiftwidth=2
 
 " nerdtree
 map <C-n> :NERDTreeToggle<CR>
+map <C-t> :NERDTreeFind<CR>
 let NERDTreeShowHidden=1 " show hidden files
-
-" autocomplete
-inoremap <C-space> <C-n>
 
 nmap Y y$
 
@@ -92,7 +87,6 @@ tmap <ScrollWheelUp> <C-W>N<ScrollWheelUp>
 " CoC
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
-nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 nmap ,rn <Plug>(coc-rename)
 
@@ -107,13 +101,3 @@ function! s:show_documentation()
     call CocAction('doHover')
   endif
 endfunction
-
-" Highlight symbol under cursor on CursorHold
-autocmd CursorHold * silent call CocActionAsync('highlight')
-
-highlight DiffAdd    ctermbg=22
-highlight DiffChange ctermbg=22
-highlight DiffDelete ctermbg=88
-highlight DiffText   cterm=bold ctermbg=106
-
-command! -nargs=0 Prettier :call CocAction('runCommand', 'prettier.formatFile')
