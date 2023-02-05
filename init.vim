@@ -50,7 +50,7 @@ au BufRead,BufNewFile sql* set filetype=sql
 
 " tabs autoexpand
 autocmd FileType * setlocal expandtab
-autocmd FileType graphql,yml,scss,yaml,css,typescriptreact,typescript,javascriptreact,javascript,sbt,conf,haskell setlocal tabstop=2 softtabstop=2 shiftwidth=2
+autocmd FileType graphql,yml,scss,yaml,css,typescriptreact,typescript,javascriptreact,javascript,sbt,conf,haskell,prisma setlocal tabstop=2 softtabstop=2 shiftwidth=2
 
 " nerdtree
 map <C-n> :NERDTreeToggle<CR>
