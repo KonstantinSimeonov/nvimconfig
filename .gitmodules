@@ -22,3 +22,6 @@
 [submodule "bundle/vim-graphql"]
 	path = bundle/vim-graphql
 	url = https://github.com/jparise/vim-graphql.git
+[submodule "bundle/vim-prisma"]
+	path = bundle/vim-prisma
+	url = https://github.com/prisma/vim-prisma.git
