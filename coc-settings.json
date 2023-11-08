@@ -1,3 +1,10 @@
 {
-  "tsserver.log": "on"
+  "tsserver.log": "off",
+  "tsserver.trace.server": "off",
+  "tsserver.maxTsServerMemory": 5120,
+  "tsserver.watchOptions": {
+    "watchDirectory": "useFsEvents",
+    "watchFile": "useFsEvents",
+    "fallbackPolling": "dynamicPriorityPolling"
+  }
 }
