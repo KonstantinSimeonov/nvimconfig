@@ -47,6 +47,7 @@ au BufRead,BufNewFile *.sc set filetype=scala
 au BufRead,BufNewFile *.conf set filetype=conf
 au BufRead,BufNewFile *.tsx set filetype=typescriptreact syntax=typescript
 au BufRead,BufNewFile sql* set filetype=sql
+au BufRead,BufNewFile Dockerfile* set filetype=dockerfile
 
 " tabs autoexpand
 autocmd FileType * setlocal expandtab
