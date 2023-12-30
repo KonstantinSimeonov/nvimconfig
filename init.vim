@@ -56,31 +56,6 @@ let NERDTreeShowHidden=1 " show hidden files
 
 nmap Y y$
 
-" terminal
-let g:term_buf = 0
-let g:term_win = 0
-
-function! Term_toggle(height)
-    if win_gotoid(g:term_win)
-        hide
-    else
-        botright new
-        exec "resize " . a:height
-        try
-            exec "buffer " . g:term_buf
-        catch
-            call termopen($SHELL, {"detach": 0})
-            let g:term_buf = bufnr("")
-        endtry
-        startinsert!
-        let g:term_win = win_getid()
-    endif
-endfunction
-
-map <F2> :call Term_toggle(10)<CR>
-tmap <F2> <C-\><C-n> :call Term_toggle(10)<CR>
-tmap <ScrollWheelUp> <C-W>N<ScrollWheelUp>
-
 " CoC
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
