@@ -23,6 +23,7 @@ set autoread
 set signcolumn=yes
 set ts=4 sw=4 sts=4
 set mouse=a
+set updatetime=300
 
 " column length
 set colorcolumn=100
