@@ -6,5 +6,8 @@
     "watchDirectory": "useFsEvents",
     "watchFile": "useFsEvents",
     "fallbackPolling": "dynamicPriorityPolling"
+  },
+  "hover.floatConfig": {
+    "border": true
   }
 }
