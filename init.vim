@@ -2,30 +2,23 @@ let PATHOGEN_PATH=fnamemodify($MYVIMRC, ':h') . "/autoload/vim-pathogen/autoload
 exec "source " . PATHOGEN_PATH
 execute pathogen#infect()
 
-set nocompatible
-
 set history=1000
 set wildmenu wildmode=longest:full,full
-set ruler showcmd
+set showcmd
 set backspace=indent,eol,start
-set whichwrap+=<,>,[,]
-set hlsearch incsearch magic
-set noerrorbells visualbell t_vb=
-set encoding=utf8
+set hlsearch incsearch magic smartcase
 set nobackup nowritebackup noswapfile
-set smartcase
-set showfulltag
 set scrolloff=5 sidescrolloff=5
 set hidden
 set number
-set smartindent autoindent smarttab cindent cinoptions=g0,N-s,E-s
+set smartindent autoindent smarttab
 set autoread
 set signcolumn=yes
-set ts=4 sw=4 sts=4
 set mouse=a
 set updatetime=300
+colorscheme panda
 
-" column length
+" vertical line at 100 chars
 set colorcolumn=100
 
 " fuzzy find
@@ -37,10 +30,6 @@ set clipboard+=unnamedplus
 " how to render invis chars
 set list
 set listchars=tab:→\ ,space:·,trail:·,extends:»
-
-" colors
-syntax enable
-colorscheme panda
 
 filetype plugin on
 au BufRead,BufNewFile *.tsx set filetype=typescriptreact syntax=typescript
@@ -64,15 +53,7 @@ nmap <silent> gr <Plug>(coc-references)
 nmap ,rn <Plug>(coc-rename)
 
 " Use K to show documentation in preview window
-nnoremap <silent> K :call <SID>show_documentation()<CR>
-
-function! s:show_documentation()
-  if (index(['vim','help'], &filetype) >= 0)
-    execute 'h '.expand('<cword>')
-  else
-    call CocAction('doHover')
-  endif
-endfunction
+nnoremap <silent> K :call CocAction('doHover')<CR>
 
 " pls complete my stuff when I press enter OK BRO??
 " also, c-y can go fuck itself, I don't want
