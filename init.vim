@@ -49,6 +49,7 @@ nmap Y y$
 " don't copy into register when deleting with d
 nnoremap d "_d
 vnoremap d "_d
+xnoremap p "_dP
 
 " CoC
 nmap <silent> gd <Plug>(coc-definition)
