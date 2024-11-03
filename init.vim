@@ -46,6 +46,9 @@ map <C-t> :NERDTreeFind<CR>
 let NERDTreeShowHidden=1 " show hidden files
 
 nmap Y y$
+" don't copy into register when deleting with d
+nnoremap d "_d
+vnoremap d "_d
 
 " CoC
 nmap <silent> gd <Plug>(coc-definition)
