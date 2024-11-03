@@ -33,6 +33,7 @@ set listchars=tab:→\ ,space:·,trail:·,extends:»
 
 filetype plugin on
 au BufRead,BufNewFile *.tsx set filetype=typescriptreact syntax=typescript
+au BufRead,BufNewFile *.ts*.snap set filetype=typescriptreact
 au BufRead,BufNewFile sql* set filetype=sql
 au BufRead,BufNewFile Dockerfile* set filetype=dockerfile
 
