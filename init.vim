@@ -16,7 +16,7 @@ set autoread
 set signcolumn=yes
 set mouse=a
 set updatetime=300
-colorscheme panda
+colorscheme badwolf
 
 " vertical line at 100 chars
 set colorcolumn=100
