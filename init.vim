@@ -47,8 +47,6 @@ let NERDTreeShowHidden=1 " show hidden files
 
 nmap Y y$
 " don't copy into register when deleting with d
-nnoremap d "_d
-vnoremap d "_d
 xnoremap p "_dP
 
 " CoC
