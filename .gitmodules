@@ -25,3 +25,6 @@
 [submodule "bundle/vim-prisma"]
 	path = bundle/vim-prisma
 	url = https://github.com/prisma/vim-prisma.git
+[submodule "bundle/vim-terraform"]
+	path = bundle/vim-terraform
+	url = https://github.com/hashivim/vim-terraform.git
