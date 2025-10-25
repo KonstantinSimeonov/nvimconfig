@@ -16,5 +16,14 @@
     "$HOME/.rustup/**",
     "$HOME/pkg/mod/**",
     "$HOMEBREW_PREFIX/**"
-  ]
+  ],
+  "languageserver": {
+    "terraform": {
+      "command": "terraform-ls",
+      "args": ["serve"],
+      "filetypes": ["terraform", "tf"],
+      "initializationOptions": {},
+      "settings": {}
+    }
+  }
 }

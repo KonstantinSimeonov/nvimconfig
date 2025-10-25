@@ -2,6 +2,7 @@ let PATHOGEN_PATH=fnamemodify($MYVIMRC, ':h') . "/autoload/vim-pathogen/autoload
 exec "source " . PATHOGEN_PATH
 execute pathogen#infect()
 
+set spell
 set history=1000
 set wildmenu wildmode=longest:full,full
 set showcmd
