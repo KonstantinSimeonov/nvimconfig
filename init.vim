@@ -54,6 +54,14 @@ nmap Y y$
 " don't copy into register when deleting with d
 xnoremap p "_dP
 
+" utility commands
+
+" copy current file relative path
+nnoremap ,cp :let @+=fnamemodify(expand('%'), ':~:.')<CR>:echo "copied " . expand('%')<CR> 
+nnoremap ,fp :silent! !npx prettier --write %<CR>:edit!<CR>:echo "prettier formatted"<CR>
+nnoremap ,fe :silent! !npx eslint --fix %<CR>:edit!<CR>:echo "eslint fixed"<CR>
+nnoremap ,ft :silent! !terraform fmt %<CR>:edit!<CR>:echo "terraform formatted"<CR>
+
 " CoC
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
