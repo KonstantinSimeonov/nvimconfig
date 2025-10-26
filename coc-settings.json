@@ -7,6 +7,9 @@
     "watchFile": "useFsEvents",
     "fallbackPolling": "dynamicPriorityPolling"
   },
+  "diagnostic.virtualText": true,
+  "diagnostic.virtualTextCurrentLineOnly": false,
+  "diagnostic.checkCurrentLine": true,
   "hover.floatConfig": {
     "border": true
   },
