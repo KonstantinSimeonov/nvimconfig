@@ -61,6 +61,7 @@ nnoremap ,cp :let @+=fnamemodify(expand('%'), ':~:.')<CR>:echo "copied " . expan
 nnoremap ,fp :silent! !npx prettier --write %<CR>:edit!<CR>:echo "prettier formatted"<CR>
 nnoremap ,fe :silent! !npx eslint --fix %<CR>:edit!<CR>:echo "eslint fixed"<CR>
 nnoremap ,ft :silent! !terraform fmt %<CR>:edit!<CR>:echo "terraform formatted"<CR>
+nnoremap ,gb :silent! !zellij action new-pane --close-on-exit --floating --x 5\% --y 5\%  --height 90\% --width 90\% -- tig blame %<CR>
 
 " CoC
 nmap <silent> gd <Plug>(coc-definition)
