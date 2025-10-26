@@ -18,7 +18,9 @@
     "$HOME/.cargo/**",
     "$HOME/.rustup/**",
     "$HOME/pkg/mod/**",
-    "$HOMEBREW_PREFIX/**"
+    "$HOMEBREW_PREFIX/**",
+    "**/dist/**",
+    "**/node_modules/**"
   ],
   "languageserver": {
     "terraform": {
