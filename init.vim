@@ -2,6 +2,9 @@ let PATHOGEN_PATH=fnamemodify($MYVIMRC, ':h') . "/autoload/vim-pathogen/autoload
 exec "source " . PATHOGEN_PATH
 execute pathogen#infect()
 
+set termguicolors " truecolor (fixes many themes)
+set cursorline " highlight current line
+set ignorecase smartcase " better search
 set spell
 set history=1000
 set wildmenu wildmode=longest:full,full
@@ -30,16 +33,17 @@ set clipboard+=unnamedplus
 
 " how to render invis chars
 set list
-set listchars=tab:→\ ,space:·,trail:·,extends:»
+set listchars=tab:→\ ,space:·,trail:·,extends:»,nbsp:␣
 
 filetype plugin on
 au BufRead,BufNewFile *.tsx set filetype=typescriptreact syntax=typescript
-au BufRead,BufNewFile *.ts*.snap set filetype=typescriptreact
+au BufRead,BufNewFile *.ts.snap,*.tsx.snap set filetype=typescriptreact syntax=typescript
 au BufRead,BufNewFile sql* set filetype=sql
 au BufRead,BufNewFile Dockerfile* set filetype=dockerfile
 
 " tabs autoexpand
 autocmd FileType * setlocal expandtab tabstop=2 softtabstop=2 shiftwidth=2
+autocmd FileType rust,go setlocal noexpandtab tabstop=4 shiftwidth=4
 
 " nerdtree
 map <C-n> :NERDTreeToggle<CR>
