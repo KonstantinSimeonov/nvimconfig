@@ -43,7 +43,7 @@ au BufRead,BufNewFile Dockerfile* set filetype=dockerfile
 
 " tabs autoexpand
 autocmd FileType * setlocal expandtab tabstop=2 softtabstop=2 shiftwidth=2
-autocmd FileType rust,go setlocal noexpandtab tabstop=4 shiftwidth=4
+autocmd FileType rust,go setlocal expandtab tabstop=4 shiftwidth=4
 
 " nerdtree
 map <C-n> :NERDTreeToggle<CR>
@@ -61,6 +61,7 @@ nnoremap ,cp :let @+=fnamemodify(expand('%'), ':~:.')<CR>:echo "copied " . expan
 nnoremap ,fp :silent! !npx prettier --write %<CR>:edit!<CR>:echo "prettier formatted"<CR>
 nnoremap ,fe :silent! !npx eslint --fix %<CR>:edit!<CR>:echo "eslint fixed"<CR>
 nnoremap ,ft :silent! !terraform fmt %<CR>:edit!<CR>:echo "terraform formatted"<CR>
+nnoremap ,fr :silent! :RustFmt<CR>:edit!<CR>:echo "rustfmt formatted"<CR>
 nnoremap ,gb :silent! !zellij action new-pane --close-on-exit --floating --x 5\% --y 5\%  --height 90\% --width 90\% -- tig blame %<CR>
 
 " CoC
